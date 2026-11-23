@@ -1,4 +1,4 @@
-param([Parameter(Mandatory)][string]$Contract,[ValidateSet('Expiry','Match','NoMatch')][string]$Scenario,[string]$Cli='genlayer.cmd')
+param([Parameter(Mandatory)][string]$Contract,[ValidateSet('ExpirySetup','Expiry','Match','NoMatch')][string]$Scenario,[string]$Cli='genlayer.cmd')
 $ErrorActionPreference='Stop'
 function Invoke-MatchCli {
     $out = if($Cli.EndsWith('.js')) { & node $Cli @args } else { & $Cli @args }
@@ -26,11 +26,12 @@ function Write-OfferMethod($method,[object[]]$values){
     Write-Host "$method $id"
     if($raw -notmatch "consensusStatus: '(ACCEPTED|FINALIZED)'" -or $raw -match "execution_result_name: '(ERROR|VM_ERROR|FAILURE)'"){throw "Check execution of $id before continuing."}
 }
-$entitlement= switch($Scenario){'Expiry'{'matchright-live-expiry-01'} 'Match'{'matchright-live-match-01'} 'NoMatch'{'matchright-live-no-match-01'}}
+$entitlement= switch($Scenario){'ExpirySetup'{'matchright-live-expiry-01'} 'Expiry'{'matchright-live-expiry-01'} 'Match'{'matchright-live-match-01'} 'NoMatch'{'matchright-live-no-match-01'}}
 try{
     $null=Invoke-MatchCli account use $seller
     if($Scenario -eq 'Expiry'){
-        $id=1
+        $ent=Invoke-MatchCli call $Contract get_entitlement --args $entitlement
+        $id=[long][regex]::Match($ent,'latest_offer_id:\s*(\d+)').Groups[1].Value
         $offer=Invoke-MatchCli call $Contract get_offer --args $id
         if($offer -notmatch "status: 'CONFIRMED'" -or $offer -notmatch [regex]::Escape($entitlement)){throw 'Expected the existing confirmed expiry offer.'}
         $expires=[long][regex]::Match($offer,'expires_at:\s*(\d+)').Groups[1].Value
@@ -41,7 +42,7 @@ try{
     } else {
         $prior=Invoke-MatchCli call $Contract get_entitlement --args $entitlement
         if($prior -notmatch 'latest_offer_id: 0'){throw 'The scenario already has an offer. Inspect it before proceeding.'}
-        $expires=[DateTimeOffset]::UtcNow.AddMinutes(15).ToUnixTimeSeconds()
+        $expires=[DateTimeOffset]::UtcNow.AddMinutes($(if($Scenario -eq 'ExpirySetup'){6}else{15})).ToUnixTimeSeconds()
         Write-OfferMethod create_offer @($entitlement,$incumbentAddress,$outsideAddress,100,'restore service within two business days',$expires)
         $ent=Invoke-MatchCli call $Contract get_entitlement --args $entitlement
         $id=[long][regex]::Match($ent,'active_offer_id:\s*(\d+)').Groups[1].Value
@@ -51,6 +52,7 @@ try{
         $null=Invoke-MatchCli account use $outside
         Write-OfferMethod confirm_offer @($id,$hash)
         if((Invoke-MatchCli call $Contract get_offer --args $id) -notmatch "status: 'CONFIRMED'"){throw 'Confirmation did not apply.'}
+        if($Scenario -eq 'ExpirySetup'){ Write-Host "Expiry offer $id confirmed; expires_at $expires. Run -Scenario Expiry after that time."; return }
         $clause=if($Scenario -eq 'Match'){'Return the service to working order within two business days'}else{'Acknowledge the ticket within two business days'}
         $cause=if($Scenario -eq 'Match'){'MATCH'}else{'NO_MATCH'}
         $winner=if($Scenario -eq 'Match'){$incumbentAddress}else{$outsideAddress}

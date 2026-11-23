@@ -1,0 +1,102 @@
+√ Current network
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method create_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+create_offer 0x1fc74d2bf972921a6d3921612df64d532b0a58509bc2ee27d1302773e68a6e7f
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_terms_hash on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method confirm_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+confirm_offer 0xc1de549661018e66032dc76180c60299a94011923a538898343b76d5afd077dd
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method exercise_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+exercise_offer 0xeb1317e42c5816110905c26b64aa2682b550222aa084cda91f7095b8cdfec7d4
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method adjudicate_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+adjudicate_offer 0x488b548827f06a1366228585c67a0a4f1310a34a5a57a94b040416490bd114fd
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_assignment_history on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+
+Result:
+{
+  adjudication_deadline: 1795456462,
+  assigned_at: 1795454687,
+  assignment_cause: 'NO_MATCH',
+  closed_at: 0,
+  confirmed_at: 1795454638,
+  contract: '0x62f1dd6fba8f10d1151b8d46878e4dd4158fdb2c',
+  created_at: 1795454611,
+  decision: 'NO_MATCH',
+  decision_reason: "The incumbent clause promises only to acknowledge the ticket within two business days, while the outside bidder promises to restore service within the same period. Acknowledging a request is not the same as completing the outcome of restoring service, so the incumbent's action is materially weaker even though the time frames are equal.",
+  entitlement_id: 'matchright-live-no-match-01',
+  exercise_price_units: 100,
+  exercised_at: 1795454662,
+  expires_at: 1795455504,
+  incumbent: '0xbc1a363b1427531fcb05d03ddf4d34e729011186',
+  incumbent_obligation: 'Acknowledge the ticket within two business days',
+  offer_id: 3,
+  outside_bidder: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8',
+  outside_obligation: 'restore service within two business days',
+  price_units: 100,
+  review_history: [
+    {
+      leader_rationale: "The incumbent clause promises only to acknowledge the ticket within two business days, while the outside bidder promises to restore service within the same period. Acknowledging a request is not the same as completing the outcome of restoring service, so the incumbent's action is materially weaker even though the time frames are equal.",
+      reviewed_at: 1795454687,
+      verdict: 'NO_MATCH'
+    }
+  ],
+  seller: '0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92',
+  status: 'ASSIGNED',
+  terms_hash: 'sha256:b118327aff9e47d77dee819e909e0005e327d4cafe98c66e5922ed0d239f3f2b',
+  winner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8'
+}
+
+
+
+Result:
+{
+  active_offer_id: 0,
+  entitlement_id: 'matchright-live-no-match-01',
+  latest_offer_id: 3,
+  owner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8',
+  state: 'ASSIGNED'
+}
+
+
+
+Result:
+[
+  {
+    assigned_at: 1795454687,
+    cause: 'NO_MATCH',
+    entitlement_id: 'matchright-live-no-match-01',
+    offer_id: 3,
+    owner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8'
+  }
+]
+
+

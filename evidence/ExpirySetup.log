@@ -1,0 +1,23 @@
+√ Current network
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method create_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+create_offer 0x274bac3bf5fb2fcaf0491ab0cbd363c5bc314a44870af2e604b204a596d05548
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_terms_hash on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method confirm_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+confirm_offer 0x56f3334f4e57646a759d9692b4c295fb2f4db9ca48c1778f883a5a8994bb170e
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+Expiry offer 1 confirmed; expires_at 1795454732. Run -Scenario Expiry after that time.

@@ -1,0 +1,75 @@
+√ Current network
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method finalize_expiry on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+finalize_expiry 0x1dc6bd9f935ce8205e0f806cb3a9e4c62ebb26ace904c732571f85294a3007d8
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_assignment_history on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+
+Result:
+{
+  adjudication_deadline: 0,
+  assigned_at: 1795454786,
+  assignment_cause: 'EXPIRED_CONFIRMED_OUTSIDE',
+  closed_at: 0,
+  confirmed_at: 1795454408,
+  contract: '0x62f1dd6fba8f10d1151b8d46878e4dd4158fdb2c',
+  created_at: 1795454379,
+  decision: 'PENDING',
+  decision_reason: '',
+  entitlement_id: 'matchright-live-expiry-01',
+  exercise_price_units: 0,
+  exercised_at: 0,
+  expires_at: 1795454732,
+  incumbent: '0xbc1a363b1427531fcb05d03ddf4d34e729011186',
+  incumbent_obligation: '',
+  offer_id: 1,
+  outside_bidder: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8',
+  outside_obligation: 'restore service within two business days',
+  price_units: 100,
+  review_history: [],
+  seller: '0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92',
+  status: 'ASSIGNED',
+  terms_hash: 'sha256:d00f73b61f4433daad11571c77cdaf97d45f817a674587c6d045721b687b6ea6',
+  winner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8'
+}
+
+
+
+Result:
+{
+  active_offer_id: 0,
+  entitlement_id: 'matchright-live-expiry-01',
+  latest_offer_id: 1,
+  owner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8',
+  state: 'ASSIGNED'
+}
+
+
+
+Result:
+[
+  {
+    assigned_at: 1795454786,
+    cause: 'EXPIRED_CONFIRMED_OUTSIDE',
+    entitlement_id: 'matchright-live-expiry-01',
+    offer_id: 1,
+    owner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8'
+  }
+]
+
+

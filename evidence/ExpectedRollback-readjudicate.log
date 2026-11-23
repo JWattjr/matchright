@@ -1,0 +1,17 @@
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method adjudicate_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+
+Fee deposit: 100000000000010352 wei (~0.100000000000010352 GEN)
+
+Write Transaction Hash:
+0x702a4517a4c347c17a93317d0ade16a2de02b16780657d707f3152c76d4d331e
+
+Error:
+Error: Write 0x702a4517a4c347c17a93317d0ade16a2de02b16780657d707f3152c76d4d331e transaction was decided as ACCEPTED; leader execution result: FINISHED_WITH_ERROR.
+    at assertSuccessfulExecution (file:///C:/Users/User/Desktop/Genlayer%20apps/mandate-gate/node_modules/genlayer/dist/index.js:60501:9)
+    at WriteAction.write (file:///C:/Users/User/Desktop/Genlayer%20apps/mandate-gate/node_modules/genlayer/dist/index.js:60747:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Command.<anonymous> (file:///C:/Users/User/Desktop/Genlayer%20apps/mandate-gate/node_modules/genlayer/dist/index.js:61030:5)
+
+× Error during write operation
+
