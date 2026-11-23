@@ -17,7 +17,7 @@ StudioNet, chain 61999. CLI `genlayer` 0.40.0-rc.3.
 
 **GenLayer Explorer Contract:** https://explorer-studio.genlayer.com/address/0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c
 
-All 13 transactions are FINALIZED with MAJORITY_AGREE. 12 have leader execution SUCCESS. One is an expected rollback. Hashes, votes and Explorer links are in [transactions.json](transactions.json).
+All 17 transactions are FINALIZED with MAJORITY_AGREE. 16 have leader execution SUCCESS. One is an expected rollback. Hashes, votes and Explorer links are in [transactions.json](transactions.json).
 
 | Scenario | Offer | Result | Key transaction |
 |---|---|---|---|
@@ -28,6 +28,10 @@ All 13 transactions are FINALIZED with MAJORITY_AGREE. 12 have leader execution 
 
 Each adjudication is decided by validators running the same blind clause review; the leader's verdict is accepted only when a validator's own verdict is identical. The stored `decision_reason` is the leader's rationale and is not part of consensus. State readbacks after each scenario are in `Match.log`, `NoMatch.log`, `Expiry.log` and `ExpirySetup.log`.
 
+## Attempted INSUFFICIENT demo (not achieved)
+
+Offer 4, `matchright-live-insufficient-01`, used the deliberately vague incumbent clause "Provide service soon". Validators agreed on `NO_MATCH` (the clause does not promise restoration within two business days), so the outsider was assigned. This is a correct, finalized outcome but it is not an INSUFFICIENT result. It was run once and not retried. [adjudicate](https://explorer-studio.genlayer.com/tx/0x0bd7aaf8f15c30c27561dcf15e3cd993a5fa56fd8ea85e4f9c6fb784661c49f1); readback in `Insufficient.log`.
+
 ## Not demonstrated live
 
-`INSUFFICIENT` and stale-review recovery are covered only by direct tests. All three signers are development accounts of one operator. Entitlements and prices are synthetic demo units. The earlier deployment `0x9288760e…291F` ran a superseded source and is kept in `superseded-0x9288760e/` as history only.
+`INSUFFICIENT` and stale-review recovery are covered only by direct tests; the one live attempt finalized NO_MATCH. All three signers are development accounts of one operator. Entitlements and prices are synthetic demo units. The earlier deployment `0x9288760e…291F` ran a superseded source and is kept in `superseded-0x9288760e/` as history only.

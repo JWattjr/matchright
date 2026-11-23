@@ -1,0 +1,107 @@
+√ Current network
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method create_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+create_offer 0x5859059af97c628b3c8ef634c61699101e00fb444a34d1a59f9a821e66cae221
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_terms_hash on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method confirm_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+confirm_offer 0xa2071f650eb7b34ba56f9ed9fa954dd3d8ec3de28a01056661319a4180e068ac
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method exercise_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+exercise_offer 0xc571651df973a6d239a6201d9c0b158f23e95b76357c15634f4ad0836dbbeb63
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method adjudicate_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Write operation successfully executed
+adjudicate_offer 0x0bd7aaf8f15c30c27561dcf15e3cd993a5fa56fd8ea85e4f9c6fb784661c49f1
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_assignment_history on contract at 0x62F1DD6fBa8f10d1151B8d46878E4dD4158Fdb2c...
+√ Read operation successfully executed
+
+Result:
+{
+  adjudication_deadline: 1795463102,
+  assigned_at: 1795461324,
+  assignment_cause: 'NO_MATCH',
+  closed_at: 0,
+  confirmed_at: 1795461280,
+  contract: '0x62f1dd6fba8f10d1151b8d46878e4dd4158fdb2c',
+  created_at: 1795461254,
+  decision: 'NO_MATCH',
+  decision_reason: "The incumbent's promise to provide service 'soon' is vague and does not guarantee the specific substantive outcome of restoration within the outside bidder's defined timeframe of 'two business days'.",
+  entitlement_id: 'matchright-live-insufficient-01',
+  exercise_price_units: 100,
+  exercised_at: 1795461302,
+  expires_at: 1795462145,
+  incumbent: '0xbc1a363b1427531fcb05d03ddf4d34e729011186',
+  incumbent_obligation: 'Provide service soon',
+  offer_id: 4,
+  outside_bidder: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8',
+  outside_obligation: 'restore service within two business days',
+  price_units: 100,
+  review_history: [
+    {
+      leader_rationale: "The incumbent's promise to provide service 'soon' is vague and does not guarantee the specific substantive outcome of restoration within the outside bidder's defined timeframe of 'two business days'.",
+      reviewed_at: 1795461324,
+      verdict: 'NO_MATCH'
+    }
+  ],
+  seller: '0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92',
+  status: 'ASSIGNED',
+  terms_hash: 'sha256:ad28dfaec3d7d375261165db9ab54e16ffec3d5ed969d22fb4e7735a869df2c8',
+  winner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8'
+}
+
+
+
+Result:
+{
+  active_offer_id: 0,
+  entitlement_id: 'matchright-live-insufficient-01',
+  latest_offer_id: 4,
+  owner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8',
+  state: 'ASSIGNED'
+}
+
+
+
+Result:
+[
+  {
+    assigned_at: 1795461324,
+    cause: 'NO_MATCH',
+    entitlement_id: 'matchright-live-insufficient-01',
+    offer_id: 4,
+    owner: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8'
+  }
+]
+
+
+Exception: C:\Users\User\Desktop\Genlayer apps\matchright\scripts\Demo-MatchRight.ps1:71
+Line |
+  71 |  … h 'cause:'){throw 'INSUFFICIENT outcome not observed; record as not s …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | INSUFFICIENT outcome not observed; record as not shown, do not retry.

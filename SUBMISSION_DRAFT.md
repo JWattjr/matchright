@@ -25,4 +25,4 @@ The distinct part is the right-of-first-refusal protocol around the judgment: ou
 
 ## This does not prove
 
-Semantic correctness for all clause wording, adversarial validators, independent parties (one operator holds all three keys), `INSUFFICIENT` or stale recovery on StudioNet (direct tests only), or any real asset transfer. No Portal submission or score is claimed.
+Semantic correctness for all clause wording, adversarial validators, independent parties (one operator holds all three keys), `INSUFFICIENT` or stale recovery on StudioNet (direct tests only; one live attempt with a vague clause finalized NO_MATCH), or any real asset transfer. No Portal submission or score is claimed.

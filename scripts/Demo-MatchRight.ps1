@@ -1,4 +1,4 @@
-param([Parameter(Mandatory)][string]$Contract,[ValidateSet('ExpirySetup','Expiry','Match','NoMatch')][string]$Scenario,[string]$Cli='genlayer.cmd')
+param([Parameter(Mandatory)][string]$Contract,[ValidateSet('ExpirySetup','Expiry','Match','NoMatch','Insufficient')][string]$Scenario,[string]$Cli='genlayer.cmd')
 $ErrorActionPreference='Stop'
 function Invoke-MatchCli {
     $out = if($Cli.EndsWith('.js')) { & node $Cli @args } else { & $Cli @args }
@@ -26,7 +26,7 @@ function Write-OfferMethod($method,[object[]]$values){
     Write-Host "$method $id"
     if($raw -notmatch "consensusStatus: '(ACCEPTED|FINALIZED)'" -or $raw -match "execution_result_name: '(ERROR|VM_ERROR|FAILURE)'"){throw "Check execution of $id before continuing."}
 }
-$entitlement= switch($Scenario){'ExpirySetup'{'matchright-live-expiry-01'} 'Expiry'{'matchright-live-expiry-01'} 'Match'{'matchright-live-match-01'} 'NoMatch'{'matchright-live-no-match-01'}}
+$entitlement= switch($Scenario){'ExpirySetup'{'matchright-live-expiry-01'} 'Expiry'{'matchright-live-expiry-01'} 'Match'{'matchright-live-match-01'} 'NoMatch'{'matchright-live-no-match-01'} 'Insufficient'{'matchright-live-insufficient-01'}}
 try{
     $null=Invoke-MatchCli account use $seller
     if($Scenario -eq 'Expiry'){
@@ -53,8 +53,8 @@ try{
         Write-OfferMethod confirm_offer @($id,$hash)
         if((Invoke-MatchCli call $Contract get_offer --args $id) -notmatch "status: 'CONFIRMED'"){throw 'Confirmation did not apply.'}
         if($Scenario -eq 'ExpirySetup'){ Write-Host "Expiry offer $id confirmed; expires_at $expires. Run -Scenario Expiry after that time."; return }
-        $clause=if($Scenario -eq 'Match'){'Return the service to working order within two business days'}else{'Acknowledge the ticket within two business days'}
-        $cause=if($Scenario -eq 'Match'){'MATCH'}else{'NO_MATCH'}
+        $clause=if($Scenario -eq 'Match'){'Return the service to working order within two business days'}elseif($Scenario -eq 'Insufficient'){'Provide service soon'}else{'Acknowledge the ticket within two business days'}
+        $cause=if($Scenario -eq 'Match'){'MATCH'}elseif($Scenario -eq 'Insufficient'){'NONE'}else{'NO_MATCH'}
         $winner=if($Scenario -eq 'Match'){$incumbentAddress}else{$outsideAddress}
         $null=Invoke-MatchCli account use $incumbent
         Write-OfferMethod exercise_offer @($id,100,$clause)
@@ -68,6 +68,7 @@ try{
     Write-Host $offer
     Write-Host $state
     Write-Host $history
+    if($Scenario -eq 'Insufficient'){ if($offer -notmatch "status: 'REOPENED_INSUFFICIENT'" -or $state -notmatch "state: 'AVAILABLE'" -or $history -match 'cause:'){throw 'INSUFFICIENT outcome not observed; record as not shown, do not retry.'}; return }
     if($offer -notmatch "assignment_cause: '$cause'" -or $state -notmatch "owner: '$winner'" -or $history -notmatch "cause: '$cause'"){throw 'Unexpected assignment. Read the receipt and investigate before continuing.'}
 }finally{
     $null=Invoke-MatchCli account use $original

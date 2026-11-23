@@ -115,5 +115,41 @@
     "leader_execution": "SUCCESS",
     "validator_votes": "agree,idle,idle,agree,agree",
     "explorer": "https://explorer-studio.genlayer.com/tx/0x1dc6bd9f935ce8205e0f806cb3a9e4c62ebb26ace904c732571f85294a3007d8"
+  },
+  {
+    "step": "insufficient_attempt_create_offer",
+    "hash": "0x5859059af97c628b3c8ef634c61699101e00fb444a34d1a59f9a821e66cae221",
+    "status": "Finalized · Accepted",
+    "consensus": "MAJORITY_AGREE",
+    "leader_execution": "SUCCESS",
+    "validator_votes": "agree,agree,agree,idle,agree",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0x5859059af97c628b3c8ef634c61699101e00fb444a34d1a59f9a821e66cae221"
+  },
+  {
+    "step": "insufficient_attempt_confirm_offer",
+    "hash": "0xa2071f650eb7b34ba56f9ed9fa954dd3d8ec3de28a01056661319a4180e068ac",
+    "status": "Finalized · Accepted",
+    "consensus": "MAJORITY_AGREE",
+    "leader_execution": "SUCCESS",
+    "validator_votes": "agree,idle,agree,agree,agree",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0xa2071f650eb7b34ba56f9ed9fa954dd3d8ec3de28a01056661319a4180e068ac"
+  },
+  {
+    "step": "insufficient_attempt_exercise_offer",
+    "hash": "0xc571651df973a6d239a6201d9c0b158f23e95b76357c15634f4ad0836dbbeb63",
+    "status": "Finalized · Accepted",
+    "consensus": "MAJORITY_AGREE",
+    "leader_execution": "SUCCESS",
+    "validator_votes": "idle,idle,agree,agree,agree",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0xc571651df973a6d239a6201d9c0b158f23e95b76357c15634f4ad0836dbbeb63"
+  },
+  {
+    "step": "insufficient_attempt_adjudicate_offer",
+    "hash": "0x0bd7aaf8f15c30c27561dcf15e3cd993a5fa56fd8ea85e4f9c6fb784661c49f1",
+    "status": "Finalized · Accepted",
+    "consensus": "MAJORITY_AGREE",
+    "leader_execution": "SUCCESS",
+    "validator_votes": "agree,agree,agree,timeout,disagree",
+    "explorer": "https://explorer-studio.genlayer.com/tx/0x0bd7aaf8f15c30c27561dcf15e3cd993a5fa56fd8ea85e4f9c6fb784661c49f1"
   }
 ]
