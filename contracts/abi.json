@@ -1,0 +1,156 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "adjudicate_offer": {
+      "params": [
+        [
+          "offer_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "confirm_offer": {
+      "params": [
+        [
+          "offer_id",
+          "int"
+        ],
+        [
+          "expected_terms_hash",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "create_offer": {
+      "params": [
+        [
+          "entitlement_id",
+          "string"
+        ],
+        [
+          "incumbent",
+          "address"
+        ],
+        [
+          "outside_bidder",
+          "address"
+        ],
+        [
+          "price_units",
+          "int"
+        ],
+        [
+          "outside_obligation",
+          "string"
+        ],
+        [
+          "expires_at",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    },
+    "exercise_offer": {
+      "params": [
+        [
+          "offer_id",
+          "int"
+        ],
+        [
+          "matching_price_units",
+          "int"
+        ],
+        [
+          "incumbent_obligation",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "finalize_expiry": {
+      "params": [
+        [
+          "offer_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_assignment_history": {
+      "params": [
+        [
+          "entitlement_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "array"
+    },
+    "get_entitlement": {
+      "params": [
+        [
+          "entitlement_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_offer": {
+      "params": [
+        [
+          "offer_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_terms_hash": {
+      "params": [
+        [
+          "offer_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "recover_stale_review": {
+      "params": [
+        [
+          "offer_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    }
+  }
+}

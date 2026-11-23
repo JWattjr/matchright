@@ -1,0 +1,106 @@
+√ Current network
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method create_offer on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Write operation successfully executed
+create_offer 0xb6e0f0235a2be894cb2a8ebf3fa87679877f3a9bd50357e4e1f571d20d5f9429
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_terms_hash on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method confirm_offer on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Write operation successfully executed
+confirm_offer 0x6ac7d0d86fcf81eafb8fdfbe3f8acf1342923ec142e59150ece803455db746a6
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method exercise_offer on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Write operation successfully executed
+exercise_offer 0x4be79fac97ef9790488f1a7f42b2205168892bd1686fa9fde2ebc78e96c4bd44
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling write method adjudicate_offer on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Write operation successfully executed
+adjudicate_offer 0xba7a6a742036c148e3eaa59b116e0ad468748f63f69b0c7a33ab9086c4365f1d
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_offer on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_entitlement on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+[genlayer-js] initializeConsensusSmartContract() is deprecated and will be removed in a future release. The consensus contract is now resolved from the static chain definition.
+- Calling method get_assignment_history on contract at 0x9288760e038b9E1505719C4844A792BEeCAb291F...
+√ Read operation successfully executed
+
+Result:
+{
+  adjudication_deadline: 1795454568,
+  assigned_at: 1795452790,
+  assignment_cause: 'MATCH',
+  clarification: '',
+  clarification_deadline: 0,
+  closed_at: 0,
+  confirmed_at: 1795452747,
+  contract: '0x9288760e038b9e1505719c4844a792beecab291f',
+  created_at: 1795452722,
+  decision: 'MATCH',
+  decision_reason: 'Both clauses promise the same substantive outcome—returning/restoring the service to working order—within the same deadline of two business days.',
+  entitlement_id: 'matchright-live-match-01',
+  exercise_price_units: 100,
+  exercised_at: 1795452768,
+  expires_at: 1795453615,
+  incumbent: '0xbc1a363b1427531fcb05d03ddf4d34e729011186',
+  incumbent_obligation: 'Return the service to working order within two business days',
+  offer_id: 2,
+  outside_bidder: '0x2c8eb5db1105a85be66badafed88d10cf393cdd8',
+  outside_obligation: 'restore service within two business days',
+  price_units: 100,
+  review_attempts: 1,
+  review_history: [
+    {
+      attempt: 1,
+      reason: 'Both clauses promise the same substantive outcome—returning/restoring the service to working order—within the same deadline of two business days.',
+      reviewed_at: 1795452790,
+      verdict: 'MATCH'
+    }
+  ],
+  seller: '0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92',
+  status: 'ASSIGNED',
+  terms_hash: 'sha256:b22397d2a7d0952d92cb272d5a113d3adf7cd47623f94d553ca421530e0b33ac',
+  winner: '0xbc1a363b1427531fcb05d03ddf4d34e729011186'
+}
+
+
+
+Result:
+{
+  active_offer_id: 0,
+  entitlement_id: 'matchright-live-match-01',
+  latest_offer_id: 2,
+  owner: '0xbc1a363b1427531fcb05d03ddf4d34e729011186',
+  state: 'ASSIGNED'
+}
+
+
+
+Result:
+[
+  {
+    assigned_at: 1795452790,
+    cause: 'MATCH',
+    entitlement_id: 'matchright-live-match-01',
+    offer_id: 2,
+    owner: '0xbc1a363b1427531fcb05d03ddf4d34e729011186'
+  }
+]
+
+

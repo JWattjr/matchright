@@ -1,0 +1,12 @@
+  hash: '0x0eb2113a557b7efca4dee8705a25ced1308731959aa4c81ba5afa2be75070919',
+  from_address: '0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92',
+  to_address: '0x9288760e038b9E1505719C4844A792BEeCAb291F',
+        execution_result: 'SUCCESS',
+        execution_result: 'SUCCESS',
+        execution_result: 'ERROR',
+        execution_result: 'SUCCESS',
+        execution_result: 'SUCCESS',
+        execution_result: 'ERROR',
+  result_name: 'MAJORITY_AGREE',
+    validator_votes_name: [ 'AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE' ]
+  status_name: 'FINALIZED'

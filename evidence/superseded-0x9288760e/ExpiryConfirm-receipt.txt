@@ -1,0 +1,4 @@
+  from_address: '0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8',
+  to_address: '0x9288760e038b9E1505719C4844A792BEeCAb291F',
+        execution_result: 'SUCCESS',
+  result_name: 'MAJORITY_AGREE',
